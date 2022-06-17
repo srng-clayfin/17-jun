@@ -22,17 +22,30 @@ const RegExpr = () =>
     
     
     return (
-        <View style={styles.container}>                               
+        <View style={{marginTop:50}}>                               
             <Text style={styles.msg}>
-                Enter Email :
+                Enter Email
             </Text>
             <TextInput
                 style={styles.input}
+                autoFocus={true}
+                placeholder="Enter Email : "
                 onChangeText={(e) => checkEmail(e)}  
             />            
             <Text style={styles.msg}>
                 {emailmsg}
             </Text>
+
+            <View style={{borderWidth:3,borderColor:'pink',margin:20}} >
+                <Text style={styles.msg}>                    
+                    Secure Text
+                </Text>
+                <TextInput
+                    style={styles.input1}        
+                    placeholder="Secure Text : "
+                    secureTextEntry={true}
+                />                            
+            </View>
         </View>
   )
 }
@@ -51,9 +64,11 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:22,
         marginLeft:"5%"
+      },  
+      input1: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
       },
-      container:
-      {       
-
-      }
 })
