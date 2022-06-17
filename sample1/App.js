@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Sample from './Components/Sample'
+import RegExpr from './Components/RegExpr'
 
 const App = () => {
   return (
     <View>
-      <Sample /> 
+      <RegExpr />
     </View>
   )
 }
